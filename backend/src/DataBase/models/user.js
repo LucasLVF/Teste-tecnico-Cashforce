@@ -13,7 +13,7 @@ const User = (sequelize, DataTypes) => {
         cashforceAdm: DataTypes.TINYINT(1),
     },
     {
-        tableName: 'users'
+        tableName: 'users',
     });
     User.associate = (models) => {
         User.hasOne(models.order,

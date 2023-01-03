@@ -1,5 +1,5 @@
-const Provider = (sequelize, DataTypes) => {
-    const Provider = sequelize.define('Provider', {
+const Sponsor = (sequelize, DataTypes) => {
+    const Sponsor = sequelize.define('Sponsor', {
         id: { type: DataTypes.INTEGER(11), primaryKey: true, autoIncrement: true },
         name: DataTypes.STRING(255),
         tradingName: DataTypes.STRING(255),
@@ -20,29 +20,27 @@ const Provider = (sequelize, DataTypes) => {
         bank: DataTypes.STRING(255),
         bankAgency: DataTypes.STRING(255),
         account: DataTypes.STRING(255),
-        documents: DataTypes.STRING(255),
         phoneNumber: DataTypes.STRING(255),
         situation: DataTypes.STRING(255),
         situationDate: DataTypes.STRING(255),
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
         cnpjId: DataTypes.INTEGER(11),
-        email: DataTypes.STRING(255)
+        email: DataTypes.STRING(255),
     },
     {
-        tableName: 'providers'
+        tableName: 'sponsors',
     });
-    Provider.associate = (models) => {
-        Provider.hasOne(models.order,
-          { foreignKey: 'providerId', as: 'providerIdOrder' });
-      };s
-      Provider.associate = (models) => {
-        Provider.belongsTo(models.cnpj,
+    Sponsor.associate = (models) => {
+        Sponsor.hasOne(models.offer,
+          { foreignKey: 'sponsorId', as: 'sponsorIdOffer' });
+      };
+      Sponsor.associate = (models) => {
+        Sponsor.belongsTo(models.cnpj,
           { foreignKey: 'cnpjId', as: 'cnpjs' });
       };
 
-
-return Provider;
+return Sponsor;
   };
 
-module.exports = Provider;
+module.exports = Sponsor;

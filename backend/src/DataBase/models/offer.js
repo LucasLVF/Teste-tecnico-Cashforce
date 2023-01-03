@@ -15,7 +15,7 @@ const Offer = (sequelize, DataTypes) => {
         sponsorId: DataTypes.INTEGER(11),
     },
     {
-        tableName:'offers'
+        tableName: 'offers',
     });
     Offer.associate = (models) => {
         Offer.belongsTo(models.order,

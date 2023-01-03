@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('orders', {
@@ -7,59 +5,59 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       orderNfId: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       orderNumber: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       orderPath: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       orderFileName: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       orderOriginalName: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       emissionDate: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       pdfFile: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       emitedTo: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       nNf: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       CTE: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       value: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       cnpjId: {
         defaultValue: null,
@@ -103,29 +101,28 @@ module.exports = {
       },
       orderStatusBuyer: {
         defaultValue: 0,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       orderStatusProvider: {
         defaultValue: 0,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       deliveryReceipt: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       cargoPackingList: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       deliveryCtrc: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
     });
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('orders');
-
-  }
+  },
 };

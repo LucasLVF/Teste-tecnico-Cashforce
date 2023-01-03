@@ -7,7 +7,7 @@ const Cnpj = (sequelize, DataTypes) => {
         updatedAt: DataTypes.DATE,
     },
     {
-        tableName: 'cnpjs'
+        tableName: 'cnpjs',
     });
     Cnpj.associate = (models) => {
         Cnpj.hasOne(models.order,

@@ -22,10 +22,10 @@ const Order = (sequelize, DataTypes) => {
         orderStatusProvider: DataTypes.STRING(255),
         deliveryReceipt: DataTypes.STRING(255),
         cargoPackingList: DataTypes.STRING(255),
-        deliveryCtrc: DataTypes.STRING(255)
+        deliveryCtrc: DataTypes.STRING(255),
     },
     {
-        tableName: 'orders'
+        tableName: 'orders',
     });
     Order.associate = (models) => {
         Order.belongsTo(models.cnpj,
