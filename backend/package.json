@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dotenv": "10.0",
+    "mysql2": "2.3",
+    "sequelize": "6.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "6.2"
+  }
+}
