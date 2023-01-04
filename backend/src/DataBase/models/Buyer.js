@@ -27,14 +27,14 @@ const BuyerModel = (sequelize, DataTypes) => {
         email: DataTypes.STRING(255),
     },
     {
-        tableName: 'buyers'
+        tableName: 'buyers',
     }); 
     Buyer.associate = (models) => {
-        Buyer.hasOne(models.order,
+        Buyer.hasOne(models.Order,
           { foreignKey: 'userId', as: 'userIdOrder' });
       };
       Buyer.associate = (models) => {
-        Buyer.belongsTo(models.cnpj,
+        Buyer.belongsTo(models.Cnpj,
           { foreignKey: 'cnpjId', as: 'buyerCnpj' });
       };
 

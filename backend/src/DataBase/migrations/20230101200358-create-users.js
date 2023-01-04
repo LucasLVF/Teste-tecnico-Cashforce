@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('users', {
@@ -7,53 +5,52 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       email: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       phoneNumber: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       mobile: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       departament: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       verificationCode: {
         defaultValue: null,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       emailChecked: {
         defaultValue: 0,
-        type: Sequelize.TINYINT
+        type: Sequelize.TINYINT,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       cashforceAdm: {
         defaultValue: 0,
-        type: Sequelize.TINYINT
+        type: Sequelize.TINYINT,
       },
     });
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('users');
-
-  }
+  },
 };
