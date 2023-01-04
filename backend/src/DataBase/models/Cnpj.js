@@ -10,19 +10,19 @@ const Cnpj = (sequelize, DataTypes) => {
         tableName: 'cnpjs',
     });
     Cnpj.associate = (models) => {
-        Cnpj.hasOne(models.order,
+        Cnpj.hasOne(models.Order,
           { foreignKey: 'cnpjId', as: 'cnpjIdOrder' });
       };
       Cnpj.associate = (models) => {
-        Cnpj.hasOne(models.buyer,
+        Cnpj.hasOne(models.Buyer,
           { foreignKey: 'cnpjId', as: 'cnpjIdBuyer' });
       };
       Cnpj.associate = (models) => {
-        Cnpj.hasOne(models.provider,
+        Cnpj.hasOne(models.Provider,
           { foreignKey: 'cnpjId', as: 'cnpjIdProvider' });
       };
       Cnpj.associate = (models) => {
-        Cnpj.hasOne(models.sponsor,
+        Cnpj.hasOne(models.Sponsor,
           { foreignKey: 'cnpjId', as: 'cnpjIdSponsor' });
       };
   

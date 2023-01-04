@@ -13,7 +13,7 @@ const Orderportion = (sequelize, DataTypes) => {
         tableName: 'orderportions',
     });
     Orderportion.associate = (models) => {
-        Orderportion.belongsTo(models.order,
+        Orderportion.belongsTo(models.Order,
           { foreignKey: 'orderId', as: 'order' });
       };
 

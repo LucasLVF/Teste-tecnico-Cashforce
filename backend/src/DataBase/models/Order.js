@@ -28,27 +28,27 @@ const Order = (sequelize, DataTypes) => {
         tableName: 'orders',
     });
     Order.associate = (models) => {
-        Order.belongsTo(models.cnpj,
+        Order.belongsTo(models.Cnpj,
           { foreignKey: 'cnpjId', as: 'cnpjs' });
       };
     Order.associate = (models) => {
-        Order.belongsTo(models.user,
+        Order.belongsTo(models.User,
           { foreignKey: 'userId', as: 'users' });
       };
     Order.associate = (models) => {
-        Order.belongsTo(models.buyer,
+        Order.belongsTo(models.Buyer,
           { foreignKey: 'buyerId', as: 'buyers' });
       };
     Order.associate = (models) => {
-        Order.belongsTo(models.provider,
+        Order.belongsTo(models.Provider,
           { foreignKey: 'providerId', as: 'providers' });
       };
       Order.associate = (models) => {
-        Order.hasOne(models.offer,
+        Order.hasOne(models.Offer,
           { foreignKey: 'orderId', as: 'ordersOffer' });
       };
       Order.associate = (models) => {
-        Order.hasOne(models.orderportion,
+        Order.hasOne(models.Orderportion,
           { foreignKey: 'orderId', as: 'ordersPortion' });
       };
 
