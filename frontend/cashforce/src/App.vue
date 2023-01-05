@@ -1,21 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <div>
+    <Header />
+    <Home />
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div v-for="(info,index) in information" :key="index">
+    <p>{{info.orderNumber}}</p>
+  </div>
+  </div> 
+
 </template>
 
 <script>
-import HelloWorld from './components/MainPage.vue'
+//import HelloWorld from './components/MainPage.vue'
+import './styles/global.css' 
+import Header from './components/Header'
+import Home from './components/Home.vue'
 
-  
 export default {
   name: 'App',  
-  components: {
-    HelloWorld
+  
+  data(){
+    return {
+      information:[]
+    }
   },
-  created(){
+  
+  mounted(){
     this.$axios.get('http://localhost:3001/')
-    .then((response) => {console.log(response.data)})
-  }
+    .then((response) => (this.information = response.data))
+    
+  },
+
+  components: {
+    Header,
+    Home
+  },
 }
 
 </script>
