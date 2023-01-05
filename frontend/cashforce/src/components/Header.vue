@@ -14,10 +14,10 @@
                 <img alt="Cashforce" id="menu-logo" src="https://cashforce.com.br/wp-content/themes/cashforce/assets/images/logo-cashforce.svg">
 
                 <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>videos</li>
-                    <li>Contato</li>
+                    <li>Institucional</li>
+                    <li>Sou fornecedor</li>
+                    <li>Blog</li>
+                    <li>Login</li>
 
                 </ul>
             </div>

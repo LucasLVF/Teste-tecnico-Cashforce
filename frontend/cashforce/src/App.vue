@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div id='app'>
     <Header />
     <Home />
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-
-  <div v-for="(info,index) in information" :key="index">
+    <Footer />
+  <!-- <div v-for="(info,index) in information" :key="index">
     <p>{{info.orderNumber}}</p>
-  </div>
+  </div> -->
   </div> 
 
 </template>
@@ -14,8 +13,10 @@
 <script>
 //import HelloWorld from './components/MainPage.vue'
 import './styles/global.css' 
-import Header from './components/Header'
+import Header from './components/Header.vue'
 import Home from './components/Home.vue'
+import Footer from './components/Footer.vue'
+
 
 export default {
   name: 'App',  
@@ -34,7 +35,8 @@ export default {
 
   components: {
     Header,
-    Home
+    Home,
+    Footer
   },
 }
 
