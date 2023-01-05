@@ -4,14 +4,20 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/MainPage.vue'
 
+  
 export default {
-  name: 'App',
+  name: 'App',  
   components: {
     HelloWorld
+  },
+  created(){
+    this.$axios.get('http://localhost:3001/')
+    .then((response) => {console.log(response.data)})
   }
 }
+
 </script>
 
 <style>
