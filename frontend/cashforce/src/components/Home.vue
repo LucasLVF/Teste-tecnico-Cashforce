@@ -47,6 +47,7 @@ export default {
             }
             else if (orderStatus == 7) {
                 this.dataStatus = "Recebida e confirmada"
+
             } else if (orderStatus == 8) {
                 this.dataStatus = "Pagamento Autorizado"
             }
@@ -67,7 +68,6 @@ main {
     background-color: var(--color-background-home);
     align-items: center;
     flex-direction: column;
-
 }
 
 ul {
@@ -76,22 +76,24 @@ ul {
     height: flex;
     align-items: center;
     flex-direction: column;
-    background-color: black;
-    margin: 10px;
-
-
+    background-color: #00AD8C;
+    margin: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
 }
 
 ul li {
-    margin: 0;
+    margin: 2px;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: var(--color-text-light);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #card {
     flex-direction: wrap;
-    border-color: black;
-    border-width: 50px;
 }
 </style>

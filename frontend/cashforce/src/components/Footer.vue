@@ -46,5 +46,6 @@ ul li {
     margin: 0;
     margin-left: 20px;
     color: var(--color-text-light);
+    font-weight: bold;
 }
 </style>

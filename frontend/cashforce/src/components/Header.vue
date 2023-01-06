@@ -115,6 +115,7 @@ export default{
     ul li{
         color: var(--color-text-light);
         margin: 20px 0px;
+        font-weight: bold;
     }
 
     @media (min-width: 700px){
