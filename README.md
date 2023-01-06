@@ -1,4 +1,11 @@
 # Cashforce
+<img align="center" alt="Lucas-Js" height="500" width="300" src="https://github.com/LucasLVF/Teste-tecnico-Cashforce/blob/main/misc/foto1.png">       <img align="center" alt="Lucas-Js" height="500" width="300" src="https://github.com/LucasLVF/Teste-tecnico-Cashforce/blob/main/misc/foto2.png"> Versão Mobile
+
+<img align="center" alt="Lucas-Js" height="500" width="800" src="https://github.com/LucasLVF/Teste-tecnico-Cashforce/blob/main/misc/foto3.png"> Versão Desktop
+
+## Figma
+https://www.figma.com/file/KftxJUyuYMcLq8tCZw67ha/Cashforce?node-id=0%3A1&t=h5X4lD6e1eM6XxUm-1
+
 ## Instalação
 
 1. Clone o repositório
